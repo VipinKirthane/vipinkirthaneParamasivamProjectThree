@@ -1,0 +1,17 @@
+@import 'setup';
+@import 'slotImages';
+@import 'buttons';
+
+body {
+    // background-color:#85144b;
+    color:lightseagreen;
+}
+
+ul li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width:1200px;
+    width:80%;
+}
