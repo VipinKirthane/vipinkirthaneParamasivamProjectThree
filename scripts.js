@@ -2,6 +2,9 @@
 
 $(function () {
 
+    let roundNumber = 0;
+    
+
     
     //------------ Random Image Chooser------------------
     const randomNumGenerator = function () {
@@ -25,6 +28,9 @@ $(function () {
         // $('.slotMachine3 .slotImage' + randomNumberImage3).append(`<img src="assets/image${randomNumberImage3}.png" alt="">`);
         
         combinationChecker();
+        showPlayerStats();
+        
+        
 
         // FOR CHECKING IF THE PLAYER HAS ENOUGH MONEY TO CONTINUE THE GAME
         const balanceCashChecker = () => {
@@ -41,23 +47,30 @@ $(function () {
         }
 
         //Adjust score
+           
     })
     //------------ Random Image Chooser-----------------
     
-
+    const showPlayerStats = () => {
+        $('.playerCash').text('Cash Pile: $' + playerCash);
+        $('.roundNumber').text(`Round Number: ${roundNumber++}`);
+    }
     //------------ Player Cash Counter------------------
     let playerCash = 1000;
     let defaultWager = 100;
     
     const combinationChecker = () => {
         if (randomNumberImage1 === randomNumberImage2 && randomNumberImage2 === randomNumberImage3) {
-            playerCash = ((playerCash - defaultWager) + (defaultWager * 2));
+            playerCash = ((playerCash) + (defaultWager * 2));
         } else if (randomNumberImage1 === randomNumberImage2 || randomNumberImage2 === randomNumberImage3 || randomNumberImage3 === randomNumberImage1) {
-            playerCash = ((playerCash - defaultWager) + (defaultWager + (defaultWager / 2)));
+            playerCash = ((playerCash + (defaultWager / 2)));
         } else if (randomNumberImage1 != randomNumberImage2 && randomNumberImage2 != randomNumberImage3) {
             playerCash = ((playerCash - defaultWager));
         }
-        console.log(playerCash);
     }
+
+    
+    showPlayerStats();
+    
 })
 //------------ Player Cash Counter-----------------------

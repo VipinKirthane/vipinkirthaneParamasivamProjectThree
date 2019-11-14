@@ -1,16 +1,39 @@
-.slotImages li {
-    width:120px;
-    // display: inline-block;
-    border:1px solid brown;
-    // height:100px;
-    // width:100px;
-    
+.slots {
+    display:flex;
+    justify-content: center;
+    align-items:center ;
+    height:400px;
+    .slot1, .slot2, .slot3 {
+        height:100px;
+        margin:25px 0;
+    }
 }
 
 
 img {
-        height:100px;
-        width:100px;
-        border: 2px solid #111;
-        // display:none;
-    }
+    height:150px;
+    width:150px;
+    border: 2px solid #001f3f ;
+    // display:none;
+}
+
+
+h1 {
+    text-align: center;
+    padding-top:50px;
+    color:white;
+    font-size:50px;
+}
+
+.playerCash, .roundNumber, .winnings {
+    padding:15px 15px;
+    width:150px;
+    border-radius: 5px;
+    background-color:#001f3f;
+    // border:1px solid white;
+    font-size:20px;
+    // margin:0 auto;
+    color:white;
+    text-align: center;
+    // margin-left:300px;
+}
