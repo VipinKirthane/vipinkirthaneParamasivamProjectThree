@@ -1,11 +1,16 @@
 .slotImages li {
     width:120px;
-    img {
-        height:100px;
-        width:100px;
-        border: 2px solid #111;
-        display:none;
-    }
+    // display: inline-block;
+    border:1px solid brown;
+    // height:100px;
+    // width:100px;
+    
 }
 
 
+img {
+        height:100px;
+        width:100px;
+        border: 2px solid #111;
+        // display:none;
+    }

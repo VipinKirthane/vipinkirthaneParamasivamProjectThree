@@ -181,13 +181,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .slotImages li {
   width: 120px;
+  border: 1px solid brown;
 }
 
-.slotImages li img {
+img {
   height: 100px;
   width: 100px;
   border: 2px solid #111;
-  display: none;
 }
 
 .startButton {
