@@ -1,13 +1,37 @@
 .startButton {
     padding:15px 40px;
-    border-radius: 5px;
+    border:none;
+    border-radius: 40px;
     // background-color:#001f3f;
     // border:2px solid black;
     font-size:20px;
     margin:0 auto;
     color:white;
+    background: rgba(255,255,0,0.15);
     // margin-left:300px;
-    text-align: center;
+    // text-align: center;
+    
+}
+
+.playerCash, .roundNumber  {
+    color: #fff;
+    background-color:#111;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+}
+
+.playerCash {
+    background-color: rgba(218,112,214,0.15);
+}
+
+.winnings {
+    background-color:rgba(65,105,225,0.15);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px dodgerblue, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue, 0 0 75px dodgerblue;
+}
+
+.roundNumber {
+    background-color: rgba(60,179,113,0.15);
+    color:white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #66FF66, 0 0 30px #66FF66, 0 0 40px #66FF66, 0 0 55px #66FF66, 0 0 75px #66FF66;
 }
 
 .topButtons {

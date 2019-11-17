@@ -200,16 +200,41 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 img {
   height: 150px;
   width: 150px;
-  border: 2px solid #001f3f;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(1, 3, 31, 0.8);
+  -webkit-box-shadow: 1px 1px 300px 20px blueviolet;
+          box-shadow: 1px 1px 300px 20px blueviolet;
 }
 
 h1 {
   text-align: center;
   padding-top: 50px;
-  color: white;
-  font-size: 50px;
+  font-size: 70px;
+  font-weight: 900;
+  -webkit-animation: neonGlow 0.9s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: neonGlow 0.9s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+h1 span {
+  font-size: 20px;
+}
+
+@-webkit-keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+  }
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+  }
 }
 
 .playerCash, .roundNumber, .winnings {
@@ -222,13 +247,41 @@ h1 {
   text-align: center;
 }
 
+.playerCash, .roundNumber, .winnings {
+  width: 200px;
+  font-size: 30px;
+  font-family: 'Quicksand', sans-serif;
+}
+
 .startButton {
   padding: 15px 40px;
-  border-radius: 5px;
+  border: none;
+  border-radius: 40px;
   font-size: 20px;
   margin: 0 auto;
   color: white;
-  text-align: center;
+  background: rgba(255, 255, 0, 0.15);
+}
+
+.playerCash, .roundNumber {
+  color: #fff;
+  background-color: #111;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+}
+
+.playerCash {
+  background-color: rgba(218, 112, 214, 0.15);
+}
+
+.winnings {
+  background-color: rgba(65, 105, 225, 0.15);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px dodgerblue, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue, 0 0 75px dodgerblue;
+}
+
+.roundNumber {
+  background-color: rgba(60, 179, 113, 0.15);
+  color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #66FF66, 0 0 30px #66FF66, 0 0 40px #66FF66, 0 0 55px #66FF66, 0 0 75px #66FF66;
 }
 
 .topButtons {
@@ -245,9 +298,39 @@ h1 {
   width: 200px;
 }
 
+.messageDialog {
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 100px;
+  text-align: center;
+  border: 2px solid crimson;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+}
+
+.messageDialog .restartButton {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 body {
-  background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-  color: lightseagreen;
+  background: -webkit-gradient(linear, left top, right top, from(#16222a), to(#3a6073));
+  background: linear-gradient(to right, #16222a, #3a6073);
+  background-image: url(../assets/backgroundImage.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
   height: 96vh;
 }
 
@@ -255,10 +338,25 @@ ul li {
   list-style: none;
 }
 
+.strikeOutText {
+  text-decoration: line-through;
+}
+
+@font-face {
+  font-family: 'Neon';
+  src: url("../assets/Neon.ttf") format("truetype");
+}
+
+h1 {
+  font-family: 'Dosis', Helvetica, Arial, sans-serif;
+  color: azure;
+}
+
 .wrapper {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 
 .btn-flip {
@@ -267,11 +365,13 @@ ul li {
   color: #fff;
   line-height: 40px;
   position: relative;
+  text-align: center;
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
-  font-family: 'Open Sans';
+  font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
+  font-size: 30px;
 }
 
 .btn-flip:hover:after {
@@ -291,33 +391,35 @@ ul li {
   left: 0;
   bottom: 0;
   right: 0;
-  padding-top: 15px;
+  padding-top: 30px;
   opacity: 0;
   width: 100%;
-  color: #323237;
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
-  background: #adadaf;
+  background: #111;
   content: attr(data-back);
   -webkit-transform: translateY(-50%) rotateX(90deg);
           transform: translateY(-50%) rotateX(90deg);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF7F, 0 0 30px #00FF7F, 0 0 40px #00FF7F, 0 0 55px #00FF7F, 0 0 75px #00FF7F;
+  border-radius: 40px;
 }
 
 .btn-flip:before {
   top: 0;
   left: 0;
   opacity: 1;
-  color: #adadaf;
   display: block;
   padding: 0 30px;
   line-height: 40px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
-  background: #323237;
+  background: rgba(255, 255, 0, 0);
   content: attr(data-front);
   -webkit-transform: translateY(0) rotateX(0);
           transform: translateY(0) rotateX(0);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 40px #FFFF00, 0 0 55px #FFFF00, 0 0 75px #FFFF00;
+  border-radius: 40px;
 }

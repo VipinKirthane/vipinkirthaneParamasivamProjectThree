@@ -1,26 +1,45 @@
 @import 'setup';
 @import 'slotImages';
 @import 'buttons';
+@import 'messageDialogBox';
 
 body {
-    // background-color:#85144b;
-    background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-    // background-image: url(../assets/backgroundImage.jpg);
-    // background-position: center;
-    // background-repeat: none;
-    // background-size: cover;
-    color:lightseagreen;
+    // background-color:#090000;
+    background: linear-gradient(to right, #16222a, #3a6073);
+    // background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
+    // background: linear-gradient(to right, #7474bf, #348ac7);
+
+    background-image: url(../assets/backgroundImage.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
     height:96vh;
+    
 }
 
 ul li {
     list-style: none;
 }
 
+.strikeOutText {
+    text-decoration: line-through;
+}
+
+@font-face {
+  font-family: 'Neon';
+  src: url('../assets/Neon.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+h1 {
+    font-family: 'Dosis', Helvetica, Arial, sans-serif;
+    color:azure;
+}
+
 .wrapper {
     max-width:1200px;
     width:80%;
     margin:0 auto;
+    position: relative;
 }
 
 
@@ -42,12 +61,13 @@ $speed: 0.5s;
     color: #fff;
     line-height: 40px;
     position: relative;
-    // text-align: center;
+    text-align: center;
     letter-spacing: 1px;
     display: inline-block;
     text-decoration: none;
-    font-family: 'Open Sans';
+    font-family: 'Quicksand', sans-serif;
     text-transform: uppercase;
+    font-size:30px;
     
     &:hover{
         
@@ -67,30 +87,35 @@ $speed: 0.5s;
         left: 0;
         bottom:0;
         right:0;
-        padding-top:15px;
+        padding-top:30px;
         opacity: 0;
         width: 100%;
-        color: #323237;
+        // color: #323237;
         display: block;
         transition: $speed;
         position: absolute;
-        background: #adadaf;
+        background: #111;
         content: attr(data-back);
         transform: translateY(-50%) rotateX(90deg);
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF7F, 0 0 30px #00FF7F, 0 0 40px #00FF7F, 0 0 55px #00FF7F, 0 0 75px #00FF7F;
+        border-radius: 40px;
     }
     
     &:before{
         top: 0;
         left: 0;
         opacity: 1;
-        color: #adadaf;
         display: block;
         padding: 0 30px;
         line-height: 40px;
         transition: $speed;
         position: relative;
-        background: #323237;
+        background: rgba(255,255,0,0.0);
         content: attr(data-front);
         transform: translateY(0) rotateX(0);
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 40px #FFFF00, 0 0 55px #FFFF00, 0 0 75px #FFFF00;
+        border-radius: 40px;
     }
 }
+
+// H1 glow animation courtesy of https://codepen.io/valhead/pen/djHoD;
