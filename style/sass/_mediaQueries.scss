@@ -1,0 +1,22 @@
+@media (max-width: 1100px) {
+    .startButton {
+        // margin:0;
+        // width:400px;
+    }
+    
+    .roundNumber, .playerCash {
+        margin:20px auto;
+    }
+
+    .topButtons {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+    .startButton:hover {
+        padding-top:0px;
+    } &:after {
+        padding-top:0px;
+    }
+}

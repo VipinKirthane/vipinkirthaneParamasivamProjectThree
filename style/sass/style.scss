@@ -1,38 +1,15 @@
 @import 'setup';
 @import 'slotImages';
 @import 'buttons';
-@import 'messageDialogBox';
+@import 'mediaQueries';
 
-body {
-    // background-color:#090000;
+.backgroundImage {
     background: linear-gradient(to right, #16222a, #3a6073);
-    // background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
-    // background: linear-gradient(to right, #7474bf, #348ac7);
-
     background-image: url(../assets/backgroundImage.jpg);
     background-position: center;
     background-repeat: none;
     background-size: cover;
     height:96vh;
-    
-}
-
-ul li {
-    list-style: none;
-}
-
-.strikeOutText {
-    text-decoration: line-through;
-}
-
-@font-face {
-  font-family: 'Neon';
-  src: url('../assets/Neon.ttf')  format('truetype'), /* Safari, Android, iOS */
-}
-
-h1 {
-    font-family: 'Dosis', Helvetica, Arial, sans-serif;
-    color:azure;
 }
 
 .wrapper {
@@ -43,19 +20,36 @@ h1 {
 }
 
 
-// body{
-//     width: 100vw;
-//     height: 100vh;
-//     display: flex;
-//     position: relative;
-//     background: #1e1e24;
-//     align-items: center;
-//     justify-content: center;
-// }
+main {
+}
+
+ul li {
+    list-style: none;
+}
+
+.strikeOutText {
+    text-decoration: line-through;
+}
+
+h1 {
+    font-family: 'Dosis', Helvetica, Arial, sans-serif;
+    color:azure;
+    text-align: center;
+    padding-top:80px;
+    padding-bottom:20px;
+    margin-top:0;
+    font-size:70px;
+    letter-spacing: 5px;
+    font-weight: 900;
+    animation: neonGlow 0.9s infinite alternate $easeInOutQuad;
+    span {
+        font-size:20px;
+    }
+}
 
 $speed: 0.5s;
 
-.btn-flip{
+.startButton{
     opacity: 1;
     outline: 0;
     color: #fff;
@@ -74,6 +68,7 @@ $speed: 0.5s;
         &:after{
             opacity: 1;
             transform: translateY(0) rotateX(0);
+            padding-top:30px;
         }
         
         &:before{
@@ -87,7 +82,7 @@ $speed: 0.5s;
         left: 0;
         bottom:0;
         right:0;
-        padding-top:30px;
+        // padding-top:30px;
         opacity: 0;
         width: 100%;
         // color: #323237;
@@ -118,4 +113,18 @@ $speed: 0.5s;
     }
 }
 
-// H1 glow animation courtesy of https://codepen.io/valhead/pen/djHoD;
+
+footer {
+    background-color:#111;
+    color:white;
+    text-align: center;
+    height:4vh;
+    p {
+        margin:0 auto;
+        font-size:20px;
+        height:100%;
+        padding-top:10px;
+    }
+}
+// H1 glow animation thanks to Val Head: https://codepen.io/valhead/pen/djHoD
+// Start Button thanks to Alex Moore: https://codepen.io/MoorLex/pen/NBwNZa

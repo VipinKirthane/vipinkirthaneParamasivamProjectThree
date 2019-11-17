@@ -1,8 +1,15 @@
 let roundNumber = 0;
 let winnings = 0;
 
+
 $(function () {
 
+    Swal.fire(`Welcome To Slot Machines!
+                $_______________________$
+                If 🍒🍒🍒 = You win $200, 
+                If 🍒🍒   =  You win $50,
+                If 🍒     =  You win $0
+                $_______________________$`);
 
     //-------------------- Random Image Chooser-----------------------------
     const randomNumGenerator = function () {
@@ -36,20 +43,36 @@ $(function () {
 
     //------------------To check if player has enough cash-------------------
     const balanceCashChecker = () => {
-        if (playerCash > 10000 && playerCash < 200000) {
+        if (playerCash > 1000 && playerCash < 2000) {
             // continue game
-        } else if (playerCash >= 1100) {
+        } else if (playerCash >= 2000) {
             // you are cheating, get out of the casino
-            playerCash=1000;
-            winnings=0;
-            roundNumber=0;
+            playerCash = 1000;
+            winnings = 0;
+            roundNumber = 0;
+            
             $('.playerCash').text(`Cash Pile: $${playerCash}`);
             $('.winnings').html(`Winnings: $${winnings}`);
-            // alert('You are cheating!!!, get out');
-            $('.messageDialog').text('You lose!!').css('display','inline-block');
             $('.roundNumber').text(`Round Number: ${roundNumber}`);
-        } else {
-            // alert('Get outta here, you are broke now!')
+            Swal.fire({
+                title: 'JACKPOT!',
+                text: 'You won $1000, we will take all your money now',
+                type: 'error',
+                confirmButtonText: 'RESTART GAME'
+            });
+        } else if (playerCash < 500) {
+            playerCash = 1000;
+            winnings = 0;
+            roundNumber = 0;
+            $('.playerCash').text(`Cash Pile: $${playerCash}`);
+            $('.winnings').html(`Winnings: $${winnings}`);
+            $('.roundNumber').text(`Round Number: ${roundNumber}`);
+            Swal.fire({
+                title: 'Not Enough Money',
+                text: 'You don\'t have enough money to play. SECURITY!!!',
+                type: 'error',
+                confirmButtonText: 'RESTART GAME'
+            });
         }
     }
     //------------------To check if player has enough cash-------------------
@@ -92,14 +115,16 @@ $(function () {
 
 
     //---------------------- Click Event to START the game ----------------
-    $('button').on('click', function () {
+    $('.startButton').on('click', function () {
         playGame();
         // Using slideup() to create delay for bounce effect to happen
         $('.winnings').removeClass('zoomIn').removeClass('heartBeat').slideUp(1).slideDown(1).addClass('heartBeat');
         $('.startButton').removeClass('zoomIn').removeClass('pulse').slideUp(1).slideDown(1).addClass('pulse');
-        $('img').removeClass('slideInUp').removeClass('slideInUp').slideUp(1).slideDown(1).addClass('slideInUp');
+        $('.slots').removeClass('slideInUp').removeClass('flipInX').slideUp(1).slideDown(1).addClass('flipInX');
     })
     //---------------------- Click Event to START the game ----------------
     showPlayerStats();
+    
 })
+
 //---------------------------- Player Cash Counter----------------------------
