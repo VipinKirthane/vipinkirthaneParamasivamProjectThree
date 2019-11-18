@@ -7,7 +7,7 @@
     background: rgba(255,255,0,0.15);
 }
 
-.playerCash, .roundNumber  {
+.playerCash, .roundNumber {
     color: #fff;
     background-color:#111;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
@@ -20,6 +20,8 @@
 .winnings {
     background-color:rgba(65,105,225,0.15);
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px dodgerblue, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue, 0 0 75px dodgerblue;
+    margin:0 auto;
+    width:200px;
 }
 
 .roundNumber {
@@ -31,9 +33,4 @@
 .topButtons {
     display: flex;
     justify-content: center;
-}
-
-.winnings {
-    margin:0 auto;
-    width:200px;
 }

@@ -20,9 +20,6 @@
 }
 
 
-main {
-}
-
 ul li {
     list-style: none;
 }
@@ -64,7 +61,6 @@ $speed: 0.5s;
     font-size:30px;
     
     &:hover{
-        
         &:after{
             opacity: 1;
             transform: translateY(0) rotateX(0);
@@ -82,10 +78,8 @@ $speed: 0.5s;
         left: 0;
         bottom:0;
         right:0;
-        // padding-top:30px;
         opacity: 0;
         width: 100%;
-        // color: #323237;
         display: block;
         transition: $speed;
         position: absolute;
@@ -126,5 +120,6 @@ footer {
         padding-top:10px;
     }
 }
+
 // H1 glow animation thanks to Val Head: https://codepen.io/valhead/pen/djHoD
 // Start Button thanks to Alex Moore: https://codepen.io/MoorLex/pen/NBwNZa

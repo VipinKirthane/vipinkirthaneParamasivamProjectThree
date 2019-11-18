@@ -225,17 +225,14 @@ img {
   }
 }
 
-.playerCash, .roundNumber, .winnings {
+.playerCash,
+.roundNumber,
+.winnings {
   padding: 15px 15px;
-  width: 150px;
   border-radius: 5px;
   background-color: #001f3f;
-  font-size: 20px;
   color: white;
   text-align: center;
-}
-
-.playerCash, .roundNumber, .winnings {
   width: 200px;
   font-size: 30px;
   font-family: 'Quicksand', sans-serif;
@@ -263,6 +260,8 @@ img {
 .winnings {
   background-color: rgba(65, 105, 225, 0.15);
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px dodgerblue, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue, 0 0 75px dodgerblue;
+  margin: 0 auto;
+  width: 200px;
 }
 
 .roundNumber {
@@ -280,27 +279,89 @@ img {
           justify-content: center;
 }
 
-.winnings {
-  margin: 0 auto;
-  width: 200px;
-}
-
 @media (max-width: 1100px) {
-  .roundNumber, .playerCash {
+  h1 {
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
+  .startButton::before,
+  .startButton::after {
+    font-size: 20px;
+    line-height: 10px;
+  }
+  .startButton::before {
+    line-height: 20px;
+  }
+  .startButton {
+    line-height: 20px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+  .startButton:hover:after {
+    padding-top: 30px;
+    border-radius: 20px;
+    width: 100%;
+    line-height: 30px;
+  }
+  .startButton:hover:before {
+    opacity: 0;
+    padding: 0 30px;
+    line-height: 20px;
+    border-radius: 20px;
+  }
+  .playerCash,
+  .startButton,
+  .roundNumber,
+  .winnings {
+    width: 150px;
+    font-size: 20px;
+  }
+  .winnings {
+    margin-top: 100px;
+  }
+  .roundNumber,
+  .playerCash {
     margin: 20px auto;
   }
   .topButtons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
+    padding-top: 40px;
   }
-  .startButton:hover {
-    padding-top: 0px;
+  .slots {
+    padding-top: 80px;
+    padding-bottom: 0px;
   }
-  :after {
+  .slots .slot1, .slots .slot2, .slots .slot3 {
+    height: 100px;
+    margin: 25px 0;
+  }
+  img {
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 694px) {
+  h1 {
     padding-top: 0px;
+    font-size: 50px;
+  }
+  .winnings {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    padding-top: 50px;
+  }
+  .winnings {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 493px) {
+  .slots {
+    padding-top: 20px;
   }
 }
 

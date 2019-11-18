@@ -2,7 +2,6 @@
     display:flex;
     justify-content: center;
     align-items:center ;
-    // height:320px;
     padding-top:70px;
     padding-bottom:70px;
     .slot1, .slot2, .slot3 {
@@ -34,6 +33,7 @@ $easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
                  0 0 140px rgba(66,220,219,.5),
                  0 0 200px rgba(66,220,219,.5);
   }
+
   100% {
     text-shadow: 0 0 2px rgba(255,255,255,.8),
                  0 0 8px rgba(255,255,255,.8),
@@ -45,22 +45,18 @@ $easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
                  0 0 80px rgba(66,220,219,.5);
   }
 }
-
 // h1 glow effect
 
-.playerCash, .roundNumber, .winnings {
+
+
+.playerCash, 
+.roundNumber, 
+.winnings {
     padding:15px 15px;
-    width:150px;
     border-radius: 5px;
     background-color:#001f3f;
-    // border:1px solid white;
-    font-size:20px;
-    // margin:0 auto;
     color:white;
     text-align: center;
-}
-
-.playerCash, .roundNumber, .winnings {
     width:200px;
     font-size: 30px;
     font-family: 'Quicksand', sans-serif;

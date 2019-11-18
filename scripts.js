@@ -7,9 +7,8 @@ $(function () {
     Swal.fire(`Welcome To Slot Machines!
                 $_______________________$
                 If 🍒🍒🍒 = You win $200, 
-                If 🍒🍒   =  You win $50,
-                If 🍒     =  You win $0
-                $_______________________$`);
+                If 🍒🍒   = You win $50,
+                If 🍒     = You win $0.`);
 
     //-------------------- Random Image Chooser-----------------------------
     const randomNumGenerator = function () {
