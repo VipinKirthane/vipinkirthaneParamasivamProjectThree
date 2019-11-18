@@ -4,12 +4,15 @@ let winnings = 0;
 
 $(function () {
 
-    // Welcome screen from Sweet Alert
+    // -------------------Welcome screen from Sweet Alert----------------------------
     Swal.fire(`Welcome To Slot Machines!
                 $_______________________$
                 If 🍒🍒🍒 = You win $200, 
                 If 🍒🍒   = You win $50,
                 If 🍒     = You win $0.`);
+    // -------------------Welcome screen from Sweet Alert----------------------------
+
+
 
     //-------------------- Random Image Number Generator-----------------------------
     const randomNumGenerator = function () {
@@ -82,7 +85,6 @@ $(function () {
     
 
 
-
     //--------------------- Shows Player Stats ------------------------------
     const showPlayerStats = () => {
         $('.playerCash').text(`Cash Pile: $${playerCash}`);
@@ -90,7 +92,6 @@ $(function () {
         $('.winnings').html(`Winnings: $${winnings}`);
     }
     //----------------------- Shows Player Stats -----------------------------
-
 
 
 
@@ -117,8 +118,6 @@ $(function () {
     
 
 
-
-
     //---------------------- Click Event to Start the game ----------------
     $('.startButton').on('click', function () {
         playGame();
@@ -130,5 +129,3 @@ $(function () {
     //---------------------- Click Event to START the game ----------------
     showPlayerStats();
 })
-
-//---------------------------- Player Cash Counter----------------------------
