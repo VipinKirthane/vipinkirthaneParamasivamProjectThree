@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="sweetalert2.min.css">
-    <link rel="stylesheet" href="dark.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">  <!--Animate CSS-->
+    <link rel="stylesheet" href="styles/sweetalert2.css"> <!--Sweet Alert-->
+    <link rel="stylesheet" href="styles/darkMin.css"> <!--Sweet Alert Dark Theme-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,600|Quicksand&display=swap" rel="stylesheet"> <!--Google Fonts-->
     <link rel="stylesheet" href="styles/style.css">
     <title>Slot Machine</title>
 </head>
 
 <body>
     <div class="backgroundImage">
-        <header class="wrapper">        <!-- Header Start-->
+        <header class="wrapper">                                <!-- Header Start-->
             <h1 class="">$LOT<span class="strikeOutText">SCAM</span> MACHINE</h1>
-        </header>                       <!-- Header End-->
+        </header>                                               <!-- Header End-->
     
-        <main>                          <!-- Main Start-->
+        <main>                                                  <!-- Main Start-->
             <div class="wrapper">
                 <div class="topButtons">    
                     <div class="playerCash animated zoomIn"></div>
@@ -27,39 +26,39 @@
                     <div class="roundNumber animated zoomIn">Round Number:</div>
                 </div>
             
-                <section class="slots animated slideInUp">   <!-- The slots -->
-                    <div class="slot1">
-                        <img src="" alt="Random image of Cherry, Lemon or 7 based on slot machine output">
+                <section class="slots animated slideInUp">   <!-- The slots Start-->
+                    <div class="slot1"> 
+                        <img src="" alt="">                 <!--Placeholder for first image-->
                     </div>
                     <div class="slot2">
-                        <img src="" alt="Random image of Cherry, Lemon or 7 based on slot machine output">
+                        <img src="" alt="">                 <!--Placeholder for second image-->
                     </div>
                     <div class="slot3">
-                        <img src="" alt="Random image of Cherry, Lemon or 7 based on slot machine output">
+                        <img src="" alt="">                 <!--Placeholder for second image-->
                     </div>
-                </section>
+                </section>                                  <!-- The slots End -->
     
                 <div class="winnings animated zoomIn">Winnings:</div>
             </div>
-        </main>             <!-- Main End-->
+        </main>                                             <!-- Main End-->
     </div>
 
-    <footer>                <!-- Footer Start-->
+    <footer>                                                <!-- Footer Start-->
         <div class="footerPara wrapper">
             <p>Copyright © Vipin Kirthane 2019</p>
         </div>
-    </footer>               <!-- Footer End-->
+    </footer>                                               <!-- Footer End-->
 
     
     <!-- Loads jQuery, script file & sweet alert -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-    <script src="scripts.js"></script>
-    <script src="sweetalert2.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/sweetalert2.js"></script>
     <!-- Loads jQuery, script file & sweet alert -->
 
 </body>
+
 </html>
 
-<!-- Fix google font cdn links -->
 <!-- Read the feedback from previous projects -->
 <!-- Do what collin said about using init() & namespacing -->

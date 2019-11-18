@@ -207,22 +207,73 @@ img {
           box-shadow: 1px 1px 1000px 5px blueviolet;
 }
 
-@-webkit-keyframes neonGlow {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
-  }
-  100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
-  }
+.startButton {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  font-size: 30px;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.15);
 }
 
-@keyframes neonGlow {
-  0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
-  }
-  100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
-  }
+.startButton:hover:after {
+  opacity: 1;
+  -webkit-transform: translateY(0) rotateX(0);
+          transform: translateY(0) rotateX(0);
+  padding-top: 30px;
+}
+
+.startButton:hover:before {
+  opacity: 0;
+  -webkit-transform: translateY(50%) rotateX(90deg);
+          transform: translateY(50%) rotateX(90deg);
+}
+
+.startButton:after {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  background: #111;
+  content: attr(data-back);
+  -webkit-transform: translateY(-50%) rotateX(90deg);
+          transform: translateY(-50%) rotateX(90deg);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF7F, 0 0 30px #00FF7F, 0 0 40px #00FF7F, 0 0 55px #00FF7F, 0 0 75px #00FF7F;
+  border-radius: 40px;
+}
+
+.startButton:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  background: rgba(255, 255, 0, 0);
+  content: attr(data-front);
+  -webkit-transform: translateY(0) rotateX(0);
+          transform: translateY(0) rotateX(0);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 40px #FFFF00, 0 0 55px #FFFF00, 0 0 75px #FFFF00;
+  border-radius: 40px;
 }
 
 .playerCash,
@@ -231,30 +282,16 @@ img {
   padding: 15px 15px;
   border-radius: 5px;
   background-color: #001f3f;
-  color: white;
+  color: #fff;
   text-align: center;
   width: 200px;
   font-size: 30px;
   font-family: 'Quicksand', sans-serif;
 }
 
-.startButton {
-  border: none;
-  border-radius: 50px;
-  font-size: 20px;
-  margin: 0 auto;
-  color: white;
-  background: rgba(255, 255, 0, 0.15);
-}
-
-.playerCash, .roundNumber {
-  color: #fff;
-  background-color: #111;
+.playerCash,
+.roundNumber {
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
-}
-
-.playerCash {
-  background-color: rgba(218, 112, 214, 0.15);
 }
 
 .winnings {
@@ -268,6 +305,10 @@ img {
   background-color: rgba(60, 179, 113, 0.15);
   color: white;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #66FF66, 0 0 30px #66FF66, 0 0 40px #66FF66, 0 0 55px #66FF66, 0 0 75px #66FF66;
+}
+
+.playerCash {
+  background-color: rgba(218, 112, 214, 0.15);
 }
 
 .topButtons {
@@ -365,16 +406,6 @@ img {
   }
 }
 
-.backgroundImage {
-  background: -webkit-gradient(linear, left top, right top, from(#16222a), to(#3a6073));
-  background: linear-gradient(to right, #16222a, #3a6073);
-  background-image: url(../assets/backgroundImage.jpg);
-  background-position: center;
-  background-repeat: none;
-  background-size: cover;
-  height: 96vh;
-}
-
 .wrapper {
   max-width: 1200px;
   width: 80%;
@@ -386,8 +417,14 @@ ul li {
   list-style: none;
 }
 
-.strikeOutText {
-  text-decoration: line-through;
+.backgroundImage {
+  background: -webkit-gradient(linear, left top, right top, from(#16222a), to(#3a6073));
+  background: linear-gradient(to right, #16222a, #3a6073);
+  background-image: url(../assets/backgroundImage.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  height: 96vh;
 }
 
 h1 {
@@ -406,71 +443,25 @@ h1 {
 
 h1 span {
   font-size: 20px;
+  text-decoration: line-through;
 }
 
-.startButton {
-  opacity: 1;
-  outline: 0;
-  color: #fff;
-  line-height: 40px;
-  position: relative;
-  text-align: center;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-decoration: none;
-  font-family: 'Quicksand', sans-serif;
-  text-transform: uppercase;
-  font-size: 30px;
+@-webkit-keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+  }
 }
 
-.startButton:hover:after {
-  opacity: 1;
-  -webkit-transform: translateY(0) rotateX(0);
-          transform: translateY(0) rotateX(0);
-  padding-top: 30px;
-}
-
-.startButton:hover:before {
-  opacity: 0;
-  -webkit-transform: translateY(50%) rotateX(90deg);
-          transform: translateY(50%) rotateX(90deg);
-}
-
-.startButton:after {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  width: 100%;
-  display: block;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: absolute;
-  background: #111;
-  content: attr(data-back);
-  -webkit-transform: translateY(-50%) rotateX(90deg);
-          transform: translateY(-50%) rotateX(90deg);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF7F, 0 0 30px #00FF7F, 0 0 40px #00FF7F, 0 0 55px #00FF7F, 0 0 75px #00FF7F;
-  border-radius: 40px;
-}
-
-.startButton:before {
-  top: 0;
-  left: 0;
-  opacity: 1;
-  display: block;
-  padding: 0 30px;
-  line-height: 40px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: relative;
-  background: rgba(255, 255, 0, 0);
-  content: attr(data-front);
-  -webkit-transform: translateY(0) rotateX(0);
-          transform: translateY(0) rotateX(0);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 40px #FFFF00, 0 0 55px #FFFF00, 0 0 75px #FFFF00;
-  border-radius: 40px;
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 60px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5), 0 0 100px rgba(66, 220, 219, 0.5), 0 0 140px rgba(66, 220, 219, 0.5), 0 0 200px rgba(66, 220, 219, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 30px rgba(66, 220, 219, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 50px rgba(66, 220, 219, 0.5), 0 0 80px rgba(66, 220, 219, 0.5);
+  }
 }
 
 footer {

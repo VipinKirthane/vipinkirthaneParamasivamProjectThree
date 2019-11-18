@@ -1,16 +1,24 @@
+// Variables
+$speed: 0.5s;
+$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$neonGlowTextShadowWhite: rgba(255,255,255,.8);
+$neonGlowTextShadowCyanOne: rgba(66,220,219,.8);
+$neonGlowTextShadowCyanTwo: rgba(66,220,219,.5);
+$whiteColor: #fff;
+$greenColor: #00FF7F;
+$greenColor2: #66FF66;
+$yellowColor: #FFFF00;
+$pinkColor: #ff0080;
+// Variables
+
+
+// SCSS imports
 @import 'setup';
 @import 'slotImages';
 @import 'buttons';
 @import 'mediaQueries';
+// SCSS imports
 
-.backgroundImage {
-    background: linear-gradient(to right, #16222a, #3a6073);
-    background-image: url(../assets/backgroundImage.jpg);
-    background-position: center;
-    background-repeat: none;
-    background-size: cover;
-    height:96vh;
-}
 
 .wrapper {
     max-width:1200px;
@@ -19,13 +27,17 @@
     position: relative;
 }
 
-
 ul li {
     list-style: none;
 }
 
-.strikeOutText {
-    text-decoration: line-through;
+.backgroundImage {
+    background: linear-gradient(to right, #16222a, #3a6073);
+    background-image: url(../assets/backgroundImage.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    height:96vh;
 }
 
 h1 {
@@ -41,72 +53,36 @@ h1 {
     animation: neonGlow 0.9s infinite alternate $easeInOutQuad;
     span {
         font-size:20px;
+        text-decoration: line-through;
     }
 }
 
-$speed: 0.5s;
+// h1 glow effect
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 10px $neonGlowTextShadowWhite,
+                 0 0 20px $neonGlowTextShadowWhite,
+                 0 0 22px $neonGlowTextShadowWhite,
+                 0 0 40px  $neonGlowTextShadowCyanOne,
+                 0 0 60px  $neonGlowTextShadowCyanOne,
+                 0 0 80px  $neonGlowTextShadowCyanTwo,
+                 0 0 100px $neonGlowTextShadowCyanTwo,
+                 0 0 140px $neonGlowTextShadowCyanTwo,
+                 0 0 200px $neonGlowTextShadowCyanTwo;
+  }
 
-.startButton{
-    opacity: 1;
-    outline: 0;
-    color: #fff;
-    line-height: 40px;
-    position: relative;
-    text-align: center;
-    letter-spacing: 1px;
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
-    text-transform: uppercase;
-    font-size:30px;
-    
-    &:hover{
-        &:after{
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
-            padding-top:30px;
-        }
-        
-        &:before{
-            opacity: 0;
-            transform: translateY(50%) rotateX(90deg);
-        }
-    }
-    
-    &:after{
-        top: 0;
-        left: 0;
-        bottom:0;
-        right:0;
-        opacity: 0;
-        width: 100%;
-        display: block;
-        transition: $speed;
-        position: absolute;
-        background: #111;
-        content: attr(data-back);
-        transform: translateY(-50%) rotateX(90deg);
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00FF7F, 0 0 30px #00FF7F, 0 0 40px #00FF7F, 0 0 55px #00FF7F, 0 0 75px #00FF7F;
-        border-radius: 40px;
-    }
-    
-    &:before{
-        top: 0;
-        left: 0;
-        opacity: 1;
-        display: block;
-        padding: 0 30px;
-        line-height: 40px;
-        transition: $speed;
-        position: relative;
-        background: rgba(255,255,0,0.0);
-        content: attr(data-front);
-        transform: translateY(0) rotateX(0);
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFFF00, 0 0 30px #FFFF00, 0 0 40px #FFFF00, 0 0 55px #FFFF00, 0 0 75px #FFFF00;
-        border-radius: 40px;
-    }
+  100% {
+    text-shadow: 0 0 2px $neonGlowTextShadowWhite,
+                 0 0 8px $neonGlowTextShadowWhite,
+                 0 0 10px $neonGlowTextShadowWhite,
+                 0 0 20px $neonGlowTextShadowCyanOne,
+                 0 0 30px $neonGlowTextShadowCyanOne,
+                 0 0 40px $neonGlowTextShadowCyanOne,
+                 0 0 50px $neonGlowTextShadowCyanTwo,
+                 0 0 80px $neonGlowTextShadowCyanTwo;
+  }
 }
-
+// h1 glow effect
 
 footer {
     background-color:#111;
@@ -122,4 +98,3 @@ footer {
 }
 
 // H1 glow animation thanks to Val Head: https://codepen.io/valhead/pen/djHoD
-// Start Button thanks to Alex Moore: https://codepen.io/MoorLex/pen/NBwNZa
