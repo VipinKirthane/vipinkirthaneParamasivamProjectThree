@@ -226,6 +226,10 @@ img {
   background: rgba(255, 255, 0, 0.15);
 }
 
+.startButton:focus {
+  background-color: rgba(220, 20, 60, 0.5);
+}
+
 .startButton:hover:after {
   opacity: 1;
   -webkit-transform: translateY(0) rotateX(0);
@@ -469,11 +473,12 @@ footer {
   color: white;
   text-align: center;
   height: 4vh;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 footer p {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 18px;
   height: 100%;
   padding-top: 10px;
 }
