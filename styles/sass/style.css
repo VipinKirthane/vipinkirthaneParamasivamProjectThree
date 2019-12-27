@@ -1,20 +1,8 @@
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
 
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block;
 }
 
@@ -37,8 +25,7 @@ a:focus {
   outline: thin dotted;
 }
 
-a:active,
-a:hover {
+a:active, a:hover {
   outline: 0;
 }
 
@@ -50,8 +37,7 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 
-b,
-strong {
+b, strong {
   font-weight: 700;
 }
 
@@ -64,10 +50,7 @@ mark {
   color: #000;
 }
 
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace, serif;
   font-size: 1em;
 }
@@ -78,15 +61,14 @@ pre {
 }
 
 q {
-  quotes: \201c \201d \2018 \2019;
+  quotes: \201C \201D \2018 \2019;
 }
 
 small {
   font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -94,11 +76,11 @@ sup {
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 img {
@@ -112,51 +94,41 @@ svg:not(:root) {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
 }
 
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
 }
 
-button,
-input {
+button, input {
   line-height: normal;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
 }
 
-button[disabled],
-input[disabled] {
+button[disabled], input[disabled] {
   cursor: default;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox], input[type=radio] {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -170,14 +142,11 @@ table {
   border-spacing: 0;
 }
 
-body,
-figure {
+body, figure {
   margin: 0;
 }
 
-legend,
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -186,7 +155,7 @@ input::-moz-focus-inner {
   visibility: hidden;
   display: block;
   font-size: 0;
-  content: "";
+  content: '';
   clear: both;
   height: 0;
 }
@@ -205,7 +174,7 @@ input::-moz-focus-inner {
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0);
   overflow: hidden;
 }
@@ -215,18 +184,16 @@ input::-moz-focus-inner {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 70px;
   padding-bottom: 70px;
 }
 
-.slots .slot1,
-.slots .slot2,
-.slots .slot3 {
+.slots .slot1, .slots .slot2, .slots .slot3 {
   height: 100px;
   margin: 25px 0;
 }
@@ -249,7 +216,7 @@ img {
   letter-spacing: 1px;
   display: inline-block;
   text-decoration: none;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-transform: uppercase;
   border: none;
   border-radius: 50px;
@@ -265,14 +232,14 @@ img {
 .startButton:hover:after {
   opacity: 1;
   -webkit-transform: translateY(0) rotateX(0);
-  transform: translateY(0) rotateX(0);
+          transform: translateY(0) rotateX(0);
   padding-top: 30px;
 }
 
 .startButton:hover:before {
   opacity: 0;
   -webkit-transform: translateY(50%) rotateX(90deg);
-  transform: translateY(50%) rotateX(90deg);
+          transform: translateY(50%) rotateX(90deg);
 }
 
 .startButton:after {
@@ -289,9 +256,8 @@ img {
   background: #111;
   content: attr(data-back);
   -webkit-transform: translateY(-50%) rotateX(90deg);
-  transform: translateY(-50%) rotateX(90deg);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00ff7f, 0 0 30px #00ff7f,
-    0 0 40px #00ff7f, 0 0 55px #00ff7f, 0 0 75px #00ff7f;
+          transform: translateY(-50%) rotateX(90deg);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00ff7f, 0 0 30px #00ff7f, 0 0 40px #00ff7f, 0 0 55px #00ff7f, 0 0 75px #00ff7f;
   border-radius: 40px;
 }
 
@@ -308,9 +274,8 @@ img {
   background: rgba(255, 255, 0, 0);
   content: attr(data-front);
   -webkit-transform: translateY(0) rotateX(0);
-  transform: translateY(0) rotateX(0);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffff00, 0 0 30px #ffff00,
-    0 0 40px #ffff00, 0 0 55px #ffff00, 0 0 75px #ffff00;
+          transform: translateY(0) rotateX(0);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ffff00, 0 0 55px #ffff00, 0 0 75px #ffff00;
   border-radius: 40px;
 }
 
@@ -324,20 +289,17 @@ img {
   text-align: center;
   width: 200px;
   font-size: 30px;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .playerCash,
 .roundNumber {
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
-    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
 }
 
 .winnings {
   background-color: rgba(65, 105, 225, 0.15);
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px dodgerblue,
-    0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue,
-    0 0 75px dodgerblue;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px dodgerblue, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue, 0 0 75px dodgerblue;
   margin: 0 auto;
   width: 200px;
 }
@@ -345,8 +307,7 @@ img {
 .roundNumber {
   background-color: rgba(60, 179, 113, 0.15);
   color: white;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #66ff66, 0 0 30px #66ff66,
-    0 0 40px #66ff66, 0 0 55px #66ff66, 0 0 75px #66ff66;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #66ff66, 0 0 30px #66ff66, 0 0 40px #66ff66, 0 0 55px #66ff66, 0 0 75px #66ff66;
 }
 
 .playerCash {
@@ -358,8 +319,8 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 1100px) {
@@ -413,9 +374,7 @@ img {
     padding-top: 80px;
     padding-bottom: 0px;
   }
-  .slots .slot1,
-  .slots .slot2,
-  .slots .slot3 {
+  .slots .slot1, .slots .slot2, .slots .slot3 {
     height: 100px;
     margin: 25px 0;
   }
@@ -462,13 +421,7 @@ ul li {
 }
 
 .backgroundImage {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#16222a),
-    to(#3a6073)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#16222a), to(#3a6073));
   background: linear-gradient(to right, #16222a, #3a6073);
   background-image: url(../assets/backgroundImage.jpg);
   background-position: center;
@@ -487,10 +440,8 @@ h1 {
   font-size: 70px;
   letter-spacing: 5px;
   font-weight: 900;
-  -webkit-animation: neonGlow 0.9s infinite alternate
-    cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  animation: neonGlow 0.9s infinite alternate
-    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-animation: neonGlow 0.9s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: neonGlow 0.9s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 h1 span {
@@ -500,27 +451,19 @@ h1 span {
 
 @-webkit-keyframes neonGlow {
   0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-      0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8),
-      0 0 40px rgba(66, 220, 219, 0.8), 0 0 200px rgba(66, 220, 219, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 200px rgba(66, 220, 219, 0.5);
   }
   100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8),
-      0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8),
-      0 0 20px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5);
   }
 }
 
 @keyframes neonGlow {
   0% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-      0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8),
-      0 0 40px rgba(66, 220, 219, 0.8), 0 0 200px rgba(66, 220, 219, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 22px rgba(255, 255, 255, 0.8), 0 0 40px rgba(66, 220, 219, 0.8), 0 0 200px rgba(66, 220, 219, 0.5);
   }
   100% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8),
-      0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8),
-      0 0 20px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 8px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(66, 220, 219, 0.8), 0 0 80px rgba(66, 220, 219, 0.5);
   }
 }
 
@@ -528,13 +471,14 @@ footer {
   background-color: #111;
   color: white;
   text-align: center;
-  height: 4vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 footer p {
   margin: 0 auto;
   font-size: 18px;
-  height: 100%;
-  padding-top: 10px;
+  height: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
+/*# sourceMappingURL=style.css.map */
