@@ -1,109 +1,119 @@
-.startButton{
+.startButton {
+  opacity: 1;
+  outline: 0;
+  color: $whiteColor;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  font-size: 30px;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.15);
+  &:focus {
+    background-color: rgba(255, 255, 51, 0.3);
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+      padding-top: 30px;
+    }
+
+    &:before {
+      opacity: 0;
+      transform: translateY(50%) rotateX(90deg);
+    }
+  }
+
+  &:after {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    width: 100%;
+    display: block;
+    transition: $speed;
+    position: absolute;
+    background: #111;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+    text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $greenColor,
+      0 0 30px $greenColor, 0 0 40px $greenColor, 0 0 55px $greenColor,
+      0 0 75px $greenColor;
+    border-radius: 40px;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
     opacity: 1;
-    outline: 0;
-    color: $whiteColor;
+    display: block;
+    padding: 0 30px;
     line-height: 40px;
+    transition: $speed;
     position: relative;
-    text-align: center;
-    letter-spacing: 1px;
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
-    text-transform: uppercase;
-    border:none;
-    border-radius: 50px;
-    font-size:30px;
-    margin:0 auto;
-    background: rgba(255,255,0,0.15);
-    &:focus {
-        background-color:rgba(255, 255, 51, 0.3);
-    }
-    
-    &:hover{
-        &:after{
-            opacity: 1;
-            transform: translateY(0) rotateX(0);
-            padding-top:30px;
-        }
-        
-        &:before{
-            opacity: 0;
-            transform: translateY(50%) rotateX(90deg);
-        }
-    }
-    
-    &:after{
-        top: 0;
-        left: 0;
-        bottom:0;
-        right:0;
-        opacity: 0;
-        width: 100%;
-        display: block;
-        transition: $speed;
-        position: absolute;
-        background: #111;
-        content: attr(data-back);
-        transform: translateY(-50%) rotateX(90deg);
-        text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $greenColor, 0 0 30px $greenColor, 0 0 40px $greenColor, 0 0 55px $greenColor, 0 0 75px $greenColor;
-        border-radius: 40px;
-    }
-    
-    &:before{
-        top: 0;
-        left: 0;
-        opacity: 1;
-        display: block;
-        padding: 0 30px;
-        line-height: 40px;
-        transition: $speed;
-        position: relative;
-        background: rgba(255,255,0,0.0);
-        content: attr(data-front);
-        transform: translateY(0) rotateX(0);
-        text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $yellowColor, 0 0 30px $yellowColor, 0 0 40px $yellowColor, 0 0 55px $yellowColor, 0 0 75px $yellowColor;
-        border-radius: 40px;
-    }
+    background: rgba(255, 255, 0, 0);
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+    text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor,
+      0 0 20px $yellowColor, 0 0 30px $yellowColor, 0 0 40px $yellowColor,
+      0 0 55px $yellowColor, 0 0 75px $yellowColor;
+    border-radius: 40px;
+  }
 }
 
-.playerCash, 
-.roundNumber, 
+.playerCash,
+.roundNumber,
 .winnings {
-    padding:15px 15px;
-    border-radius: 5px;
-    background-color:#001f3f;
-    color: $whiteColor;
-    text-align: center;
-    width:200px;
-    font-size: 30px;
-    font-family: 'Quicksand', sans-serif;
+  padding: 15px 15px;
+  border-radius: 5px;
+  background-color: #001f3f;
+  color: $whiteColor;
+  text-align: center;
+  width: 200px;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
 }
 
-.playerCash, 
+.playerCash,
 .roundNumber {
-    text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $pinkColor, 0 0 30px $pinkColor, 0 0 40px $pinkColor, 0 0 55px $pinkColor, 0 0 75px $pinkColor;
+  text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $pinkColor,
+    0 0 30px $pinkColor, 0 0 40px $pinkColor, 0 0 55px $pinkColor,
+    0 0 75px $pinkColor;
 }
 
 .winnings {
-    background-color:rgba(65,105,225,0.15);
-    text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px dodgerblue, 0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue, 0 0 75px dodgerblue;
-    margin:0 auto;
-    width:200px;
+  background-color: rgba(65, 105, 225, 0.15);
+  text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px dodgerblue,
+    0 0 30px dodgerblue, 0 0 40px dodgerblue, 0 0 55px dodgerblue,
+    0 0 75px dodgerblue;
+  margin: 0 auto;
+  width: 200px;
 }
 
 .roundNumber {
-    background-color: rgba(60,179,113,0.15);
-    color:white;
-    text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $greenColor2, 0 0 30px $greenColor2, 0 0 40px $greenColor2, 0 0 55px $greenColor2, 0 0 75px $greenColor2;
+  background-color: rgba(60, 179, 113, 0.15);
+  color: white;
+  text-shadow: 0 0 5px $whiteColor, 0 0 10px $whiteColor, 0 0 20px $greenColor2,
+    0 0 30px $greenColor2, 0 0 40px $greenColor2, 0 0 55px $greenColor2,
+    0 0 75px $greenColor2;
 }
 
 .playerCash {
-    background-color: rgba(218,112,214,0.15);
+  background-color: rgba(218, 112, 214, 0.15);
 }
 
 .topButtons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 // Start Button thanks to Alex Moore: https://codepen.io/MoorLex/pen/NBwNZa

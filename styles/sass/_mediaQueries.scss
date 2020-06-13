@@ -1,102 +1,101 @@
 @media (max-width: 1100px) {
-    h1 {
-        margin-bottom:0;
-        padding-top:20px;
-    }
+  h1 {
+    margin-bottom: 0;
+    padding-top: 20px;
+  }
 
-    .startButton::before, 
-    .startButton::after {
-        font-size:20px;
-        line-height:10px;
-    }
+  .startButton::before,
+  .startButton::after {
+    font-size: 20px;
+    line-height: 10px;
+  }
 
-    .startButton::before {
-        line-height: 20px;
-    }
-
-    .startButton{
+  .startButton::before {
     line-height: 20px;
-    font-size:20px;
+  }
+
+  .startButton {
+    line-height: 20px;
+    font-size: 20px;
     border-radius: 20px;
-        &:hover{
-            &:after{
-                padding-top:30px;
-                border-radius: 20px;
-                width:100%;
-                line-height: 30px;
-            }
-        
-            &:before{
-                opacity: 0;
-                padding: 0 30px;
-                line-height: 20px;
-                border-radius: 20px;
-            }
-        }
-    }
+    &:hover {
+      &:after {
+        padding-top: 30px;
+        border-radius: 20px;
+        width: 100%;
+        line-height: 30px;
+      }
 
-    .playerCash,
-    .startButton, 
-    .roundNumber, 
-    .winnings {
-        width:150px;
-        font-size:20px;
+      &:before {
+        opacity: 0;
+        padding: 0 30px;
+        line-height: 20px;
+        border-radius: 20px;
+      }
     }
+  }
 
-    .winnings {
-        margin-top:100px;
-    }
-    
-    .roundNumber, 
-    .playerCash {
-        margin:20px auto;
-    }
+  .playerCash,
+  .startButton,
+  .roundNumber,
+  .winnings {
+    width: 150px;
+    font-size: 20px;
+  }
 
-    .topButtons {
-        padding-top:40px;
-    }
+  .winnings {
+    margin-top: 100px;
+  }
 
-    .slots {
-        padding-top:80px;
-        padding-bottom:0px;
-        .slot1, .slot2, .slot3 {
-            height:100px;
-            margin:25px 0;
-        }
-    }
+  .roundNumber,
+  .playerCash {
+    margin: 20px auto;
+  }
 
-    img {
-        height:120px;
-        width:120px;
+  .topButtons {
+    padding-top: 40px;
+  }
+
+  .slots {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    .slot1,
+    .slot2,
+    .slot3 {
+      height: 100px;
+      margin: 25px 0;
     }
+  }
+
+  img {
+    height: 120px;
+    width: 120px;
+  }
 }
 
+@media (max-width: 694px) {
+  h1 {
+    padding-top: 0px;
+    font-size: 50px;
+  }
 
-@media(max-width:694px) {
-    h1 {
-        padding-top:0px;
-        font-size:50px;
-    }
-    
-    .winnings {
-        margin-top:40px;
-    }
+  .winnings {
+    margin-top: 40px;
+  }
 }
 
+@media (max-width: 500px) {
+  h1 {
+    padding-top: 50px;
+  }
 
-@media (max-width:500px) {
-    h1 {
-        padding-top:50px;
-    }
-    
-    .winnings {
-        margin-top:50px;
-    }
+  .winnings {
+    margin-top: 50px;
+  }
 }
 
-
-@media(max-width:493px) {
-    .slots {
-        padding-top:20px;
-    }
+@media (max-width: 493px) {
+  .slots {
+    padding-top: 20px;
+  }
 }
