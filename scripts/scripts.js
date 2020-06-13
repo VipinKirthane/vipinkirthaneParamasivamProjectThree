@@ -1,7 +1,7 @@
-let roundNumber = 0; //Round counter
-let winnings = 0; //Winnings counter
-let playerCash = 1000; //Initial player cash amount
-let defaultWager = 100; //Default bet amount per round
+let roundNumber = 0, //Round counter
+  winnings = 0, //Winnings counter
+  playerCash = 1000, //Initial player cash amount
+  defaultWager = 100; //Default bet amount per round
 
 $(function () {
   //---------------------- Event listener for starting the game --------------------------
@@ -11,7 +11,7 @@ $(function () {
   });
   //---------------------- Event listener for starting the game --------------------------
 
-  // -------------------------- Welcome screen ------------------------------------
+  // -------------------------- Welcome screen -------------------------------------------
   const welcomeMessage = () => {
     Swal.fire(`Welcome To Slot Machines!
                 $_______________________$
@@ -20,9 +20,9 @@ $(function () {
                 If 🍒     = You win $0.`);
   };
   welcomeMessage();
-  // ------------------------- Welcome screen ------------------------------------
+  // ------------------------- Welcome screen --------------------------------------------
 
-  //-------------------- Random Image Number Generator ----------------------------
+  //-------------------- Random Image Number Generator -----------------------------------
   const randomNumGenerator = () => {
     return Math.floor(Math.random() * 3) + 1;
   };
@@ -33,9 +33,9 @@ $(function () {
     let randomNumberImage3 = randomNumGenerator();
   };
   randomNumberGenerator();
-  //-------------------- Random Image Number Generator -----------------------------
+  //-------------------- Random Image Number Generator ----------------------------------
 
-  // -------------------- Play Game Function ---------------------------------------
+  // -------------------- Play Game Function --------------------------------------------
   const playGame = () => {
     randomNumberImage1 = randomNumGenerator();
     randomNumberImage2 = randomNumGenerator();
@@ -56,9 +56,9 @@ $(function () {
     showPlayerStats();
     balanceCashChecker();
   };
-  // -------------------- Play Game Function --------------------------------------
+  // -------------------- Play Game Function --------------------------------------------
 
-  //----------------- To check if player has enough cash --------------------------
+  //----------------- To check if player has enough cash --------------------------------
   const balanceCashChecker = () => {
     if (playerCash > 1000 && playerCash < 2000) {
       // continues game
@@ -100,17 +100,17 @@ $(function () {
       });
     }
   };
-  //-------------------- To check if player has enough cash ------------------------------
+  //-------------------- To check if player has enough cash -------------------------------
 
-  //------------------------------ Shows Player Stats -----------------------------------
+  //------------------------------ Shows Player Stats -------------------------------------
   const showPlayerStats = () => {
     $(".playerCash").text(`Cash Pile: $${playerCash}`);
     $(".roundNumber").text(`Round Number: ${roundNumber}`);
     $(".winnings").html(`Winnings: $${winnings}`);
   };
-  //------------------------------- Shows Player Stats ----------------------------------
+  //------------------------------- Shows Player Stats -------------------------------------
 
-  //--------------------------------- Winnings Checker -----------------------------------
+  //--------------------------------- Winnings Checker -------------------------------------
   const combinationChecker = () => {
     if (
       randomNumberImage1 === randomNumberImage2 &&
@@ -136,9 +136,9 @@ $(function () {
       winnings = -100;
     }
   };
-  //--------------------------------- Winnings Checker -----------------------------------
+  //--------------------------------- Winnings Checker -------------------------------------
 
-  //---------------------------------- Animations -----------------------------------------
+  //---------------------------------- Animations ------------------------------------------
   const animations = () => {
     // Using slideup() as a fix to create delay for heartBeat, Pulse & flipInX animation  to happen
     $(".winnings")
