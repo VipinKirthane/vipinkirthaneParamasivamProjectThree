@@ -142,23 +142,23 @@ $(function () {
   const animations = () => {
     // Using slideup() as a fix to create delay for heartBeat, Pulse & flipInX animation  to happen
     $(".winnings")
-      .removeClass("zoomIn")
-      .removeClass("heartBeat")
+      .removeClass("animate__zoomIn")
+      .removeClass("animate__heartBeat")
       .slideUp(1)
       .slideDown(1)
-      .addClass("heartBeat");
+      .addClass("animate__heartBeat");
     $(".startButton")
-      .removeClass("zoomIn")
-      .removeClass("pulse")
+      .removeClass("animate__zoomIn")
+      .removeClass("animate__pulse")
       .slideUp(1)
       .slideDown(1)
-      .addClass("pulse");
+      .addClass("animate__pulse");
     $(".slots")
-      .removeClass("slideInUp")
-      .removeClass("flipInX")
+      .removeClass("animate__slideInUp")
+      .removeClass("animate__flipInX")
       .slideUp(1)
       .slideDown(1)
-      .addClass("flipInX");
+      .addClass("animate__flipInX");
   };
   //----------------------------------- Animations -----------------------------------------
 
